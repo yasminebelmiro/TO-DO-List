@@ -5,7 +5,14 @@ export const TodoContainer = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+ 
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgba(244, 255, 195, 0.5);
+  
+  &:hover {
+    box-shadow: 5px 5px rgb(169, 196, 108, 0.5);
+  }
 `;
 
 export const Title = styled.h3`
@@ -18,7 +25,8 @@ export const Text = styled.p`
 
 export const Row = styled.div`
   display: flex;
-  flex-direction: row;` 
+  flex-direction: row;
+`;
 
 export const CheckContainer = styled.label`
   display: inline-block;
@@ -42,13 +50,13 @@ export const Checkmark = styled.span`
   left: 0;
   height: 20px;
   width: 20px;
-  background-color: #F4FFC3;
+  background-color: #a9c46c;
   border-radius: 4px;
-  border: 1px solid #F4FFC3;
+  border: none;
   transition: background-color 0.3s;
 
   ${Checkbox}:checked + & {
-    background-color: #5D8736;
+    background-color: #5d8736;
     border: none;
   }
 
@@ -71,9 +79,10 @@ export const Checkmark = styled.span`
 `;
 
 export const Button = styled.button`
-border: none;
-background: transparent;
-cursor: pointer;
-margin-left: 10px;
-
-`
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 10px;
+  left: 65%;
+`;

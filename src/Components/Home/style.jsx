@@ -9,8 +9,7 @@ export const HomeContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  background-color: #A9C46C;
-  
+  background-color: #a9c46c;
 `;
 
 export const ListContainer = styled.div`
@@ -27,18 +26,18 @@ export const ListContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  box-shadow: 10px 10px #809D3C;
+  box-shadow: 10px 10px #809d3c;
 `;
 
 export const Row = styled.div`
   display: row;
-  flex-direction: column;
+  flex-direction: row;
 `;
 
 export const Title = styled.h1`
   font-family: Oleo Script;
   font-weight: bold;
- color: #5D8736;
+  color: #5d8736;
   margin: 30px;
 `;
 
@@ -49,14 +48,14 @@ export const SearchInput = styled.input`
   padding-left: 20px;
 
   border-radius: 20px;
-  border: 2px solid #5D8736;
+  border: 2px solid #5d8736;
 
   &:focus {
-    outline: 1px solid #5D8736;
+    outline: 1px solid #5d8736;
   }
 
   &::placeholder {
-    color: #5D8736;
+    color: #5d8736;
   }
 `;
 
@@ -68,20 +67,25 @@ export const Button = styled.button`
   border: none;
 
   margin-left: 10px;
-  background-color: #5D8736;
+  background-color: #5d8736;
 
   color: #ffffff;
   cursor: pointer;
+
+  &:hover {
+    background-color: #809d3c;
+  }
 `;
 
 export const Modal = styled.div`
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  
+  z-index: 1;
   display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
 `;
@@ -105,7 +109,34 @@ export const Close = styled.span`
 `;
 
 export const TodosContainer = styled.div`
-  width: 800px;
+  width: 70%;
   display: grid;
-  grid-template-columns: auto auto ;
-`
+  gap: 20px;
+  margin-bottom: 40px;
+  grid-template-columns: auto auto;
+`;
+
+export const FilterContainer = styled.div`
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+`;
+
+export const Text = styled.p`
+  font-weight: bold;
+`;
+
+export const ButtonFilter = styled.button`
+  width: 80px;
+  height: 30px;
+  border: transparent;
+  background-color: #809d3c;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #a9c46c;
+  }
+`;
