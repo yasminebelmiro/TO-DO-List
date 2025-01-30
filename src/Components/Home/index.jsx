@@ -74,6 +74,26 @@ const index = () => {
     ];
     setTodos(newTodos);
   };
+
+  const RemoveTodo = (id) => {
+    const newTodos = [...todos];
+    const filtereddTodo = newTodos.filter((todo) =>
+      todo.id !== id 
+    );
+    setTodos(filtereddTodo);
+    console.log("remove" + filtereddTodo)
+  };
+
+  const CompleteTodo = (id) => {
+    const newTodos = [...todos];
+    newTodos.map((todo) =>
+      todo.id === id ? (todo.isComplete = !todo.isComplete) : todo
+    );
+    setTodos(newTodos);
+    console.log(newTodos);
+  };
+
+  
   return (
     <HomeContainer>
       <ListContainer>
@@ -83,8 +103,6 @@ const index = () => {
           <Button>Buscar</Button>
           <Button onClick={() => setModalForm(true)}>Nova tarefa</Button>
         </Row>
-
-
 
         {modalForm && (
           <Modal className="modal" onClick={() => setModalForm(false)}>
@@ -103,9 +121,9 @@ const index = () => {
           {todos.map((todo) => (
             <Todo
               key={todo.id}
-              title={todo.title}
-              category={todo.category}
-              date={todo.date}
+              todo={todo}
+              removeTodo={RemoveTodo}
+              completeTodo={CompleteTodo}
             />
           ))}
         </TodosContainer>
