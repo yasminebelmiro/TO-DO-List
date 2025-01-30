@@ -1,7 +1,7 @@
 # Todo List
 
 ## 📌 Sobre o Projeto
-Este projeto é uma **Lista de Tarefas (Todo List)** desenvolvida em **React**, que permite adicionar, remover, marcar como concluída e filtrar tarefas. Além disso, o sistema verifica se uma tarefa está atrasada com base na data definida pelo usuário.
+Este projeto é uma **Lista de Tarefas (Todo List)** desenvolvida em **React** com **Vite**, que permite adicionar, remover, marcar como concluída e filtrar tarefas. Além disso, o sistema verifica se uma tarefa está atrasada com base na data definida pelo usuário.
 
 ## 🚀 Funcionalidades
 - ✅ **Adicionar tarefas** com título, categoria e data.
@@ -12,7 +12,8 @@ Este projeto é uma **Lista de Tarefas (Todo List)** desenvolvida em **React**, 
 - ⏳ **Verificação de tarefas atrasadas**.
 
 ## 🛠️ Tecnologias Utilizadas
-- **React.js**
+- **Vite** (para inicialização rápida do projeto React)
+- **React.js** (para construção da interface)
 - **Styled-components** (para estilização)
 - **React Icons** (ícones para UI)
 
@@ -25,14 +26,10 @@ cd TO-DO-List
 ### 2️⃣ Instale as dependências
 ```bash
 npm install
-# ou
-yarn install
 ```
 ### 3️⃣ Execute o projeto
 ```bash
-npm start
-# ou
-yarn start
+npm run dev
 ```
 O projeto estará rodando em **http://localhost:5173/**.
 
@@ -67,4 +64,5 @@ O projeto estará rodando em **http://localhost:5173/**.
 - 📱 **Melhoria na responsividade para dispositivos móveis**.
 
 ---
+Desenvolvido por [[Yasmine Belmiro](https://github.com/yasminebelmiro)]
 
