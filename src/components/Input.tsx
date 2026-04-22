@@ -1,13 +1,13 @@
 import { forwardRef } from "react";
 
-interface LoginInputProps {
+interface InputProps {
   type: string;
   placeholder: string;
   error: string | undefined;
 }
 
-const LoginInput = forwardRef<HTMLInputElement, LoginInputProps>(
-  (props: LoginInputProps, ref) => {
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  (props: InputProps, ref) => {
     return (
       <input
         className="bg-white rounded h-10 w-full px-5 placeholder:text-blue-500 text-blue-500"
@@ -19,4 +19,4 @@ const LoginInput = forwardRef<HTMLInputElement, LoginInputProps>(
   },
 );
 
-export default LoginInput;
+export default Input;

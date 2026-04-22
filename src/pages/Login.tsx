@@ -1,9 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
-import LoginInput from "../components/LoginInput";
+
 import { login } from "../service/AuthService";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { LoginData, LoginSchema } from "../schemas/LoginSchema";
+import Input from "../components/Input";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,33 +16,30 @@ const Login = () => {
   } = useForm<LoginData>({ resolver: zodResolver(LoginSchema) });
 
   const onSubmit = async (data: LoginData) => {
-    
     try {
       await login(data.email, data.password);
       navigate("/home");
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
-  }
+  };
   return (
     <div className=" bg-blue-950 w-full h-screen flex justify-center items-center">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-[70%] flex flex-col justify-center items-center gap-10"
+        className="w-70 md:w-120  flex flex-col justify-center items-center gap-10"
       >
         <h1 className="text-white text-2xl font-montserrat">
           Gestor de tarefas
         </h1>
         <div className="w-full flex flex-col justify-center items-center gap-3">
-
-
-          <LoginInput
+          <Input
             type="email"
             placeholder="Email"
             error={errors.email?.message}
             {...register("email")}
           />
-          <LoginInput
+          <Input
             type="password"
             placeholder="Senha"
             error={errors.password?.message}
